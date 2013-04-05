@@ -1,0 +1,30 @@
+name: xCommandInfo
+version: 1.0.0
+description: Show basic bukkit-plugin informations based on command or alias input 
+author: lycano
+website: https://github.com/lycano/xCommandInfo
+main: de.luricos.bukkit.xCommandInfo.xCommandInfo
+softdepend: [PermissionsEx, Essentials, GroupManager]
+
+commands:
+  xfind:
+    description: Register your player with the supplied password.
+    usage: /<command> [command|alias] <alias or command to find>
+  xcommandinfo:
+    description: Access all xCommandInfo commands
+    aliases: [x]
+    usage: |
+           /<command> command <command_to_find> - Display plugin info via command search
+           /<command> alias <alias_to_find> - Display plugin info via alias search
+           /<command> version - show the current version and if activated the latest available version
+
+permissions:
+  xcommandinfo.command:
+    description: Allows usage of command search
+    default: true
+  xcommandinfo.alias:
+    description: Allows usage of alias search
+    default: true
+  xcommandinfo.version:
+    description: Show plugin version / Remote version
+    default: true
